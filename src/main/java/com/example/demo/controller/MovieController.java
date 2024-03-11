@@ -16,6 +16,10 @@ import org.springframework.web.client.RestTemplate;
 @Controller
 public class MovieController {
 
+    @GetMapping("/")
+    public String home() {
+        return "search_movie";
+    }
     @GetMapping("/search")
     public String searchMovieForm() {
         System.out.println("IN  MovieController->searchMovieForm()");
