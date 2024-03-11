@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.springframework.stereotype.Controller;
 
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -25,7 +26,7 @@ public class MovieController {
     @PostMapping("/getMovie")
     // @RequestParam notation and the name of the field
     // from the form in "search_movie.html" file - which is title
-    public String getMovie(@RequestParam String title) throws JsonProcessingException {
+    public String getMovie(@RequestParam String title, Model model) throws JsonProcessingException {
         System.out.println("IN  MovieController->getMovie()");
         // We can now get the "title" param from the request
         System.out.println("You searched for a movie with title: " + title);
@@ -49,6 +50,7 @@ public class MovieController {
         System.out.println(movie.toString());
         // Next step is to create a page that displays the movie info:
         // TODO: More work.
-        return "redirect:/search";
+        model.addAttribute("submittedMovie", movie); // Add submitted object
+        return "movie_display"; // Name of Thymeleaf template with display
     }
 }
