@@ -7,6 +7,18 @@
 <h2>Title: <span th:text="${submittedMovie.title}"></span></h2>
 <p>Year: <span th:text="${submittedMovie.year}"></span></p>
 <p>Rated: <span th:text="${submittedMovie.rated}"></span></p>
+<p>Released: <span th:text="${submittedMovie.released}"></span></p>
+<p>Runtime: <span th:text="${submittedMovie.runtime}"></span></p>
+<p>Genre: <span th:text="${submittedMovie.genre}"></span></p>
+<p>Director: <span th:text="${submittedMovie.director}"></span></p>
+<p>Writer: <span th:text="${submittedMovie.writer}"></span></p>
+<p>Actors: <span th:text="${submittedMovie.actors}"></span></p>
+<p>Plot: <span th:text="${submittedMovie.plot}"></span></p>
+<p>Language: <span th:text="${submittedMovie.language}"></span></p>
+<p>Country: <span th:text="${submittedMovie.country}"></span></p>
+<p>Awards: <span th:text="${submittedMovie.awards}"></span></p>
+<p>Poster: <img th:src="${submittedMovie.poster}" alt="Poster"></p>
+<p>Rotten Tomatoes Rating: <span th:text="${submittedMovie.getRottenTomatoesRating()}"></span></p>
 <br>
 <br>
 <a href="/search">Search for another movie</a>
