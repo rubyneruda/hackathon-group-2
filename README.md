@@ -7,3 +7,6 @@ The only files added were:
 - [src/main/resources/templates/movie_display.html](https://github.com/rubyneruda/hackathon-group-2/blob/master/src/main/resources/templates/movie_display.html)
 - [src/main/java/com/example/demo/model/Movie.java](https://github.com/rubyneruda/hackathon-group-2/blob/master/src/main/java/com/example/demo/model/Movie.java)
 - [src/main/java/com/example/demo/controller/MovieController.java](https://github.com/rubyneruda/hackathon-group-2/blob/master/src/main/java/com/example/demo/controller/MovieController.java)
+
+
+Follow each commit step-by-step by looking at the log [here](https://github.com/rubyneruda/hackathon-group-2/commits/master/), comments have been added in the code, as well as GitHub comments for further clarification.
