@@ -1,11 +1,9 @@
 package com.example.demo.controller;
 
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 
 @Controller
@@ -26,8 +24,12 @@ public class MovieController {
     }
 
     @PostMapping("/getMovie")
-    public String getMovie() {
+    // @RequestParam notation and the name of the field
+    // from the form in "search_movie.html" file - which is title
+    public String getMovie(@RequestParam String title) {
         System.out.println("IN  MovieController->getMovie()");
+        // We can now get the "title" param from the request
+        System.out.println("You searched for a movie with title: " + title);
         return "redirect:/search";
     }
 }
